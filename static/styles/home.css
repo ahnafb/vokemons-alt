@@ -1,0 +1,832 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@500&family=Press+Start+2P&display=swap');
+
+:root {
+    --dark-blue: #14191d;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+
+    font-family: "Orbitron", sans-serif;
+    color: aqua;
+}
+
+body {
+    background: #14191d;
+}
+
+footer {
+    background: #000000;
+}
+
+footer p {
+    color: grey;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+footer a {
+    color: grey;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+video {
+    opacity: 50%;
+}
+
+.black-shadow-hr {
+    position: relative;
+    height: 300px;
+    margin-bottom: 100px;
+    box-shadow: 20px 20px 50px 100px black;
+    background: black;
+}
+
+.black-shadow-hr-abs {
+    position: absolute;
+    width: 100%;
+    height: 200px;
+    top: 660px;
+    box-shadow: 20px 20px 50px 100px black;
+    background: black;
+    z-index: 2;
+}
+
+.logo {
+    text-decoration: none;
+    font-size: 30px;
+    font-weight: 500;
+    margin-right: 10px;
+}
+
+.nav-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px;
+    background: rgba(255, 255, 255, .1);
+    backdrop-filter: blur(40px);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 3;
+
+    border: 2px solid;
+    border-radius: 10px;
+}
+
+.navbar a {
+    text-decoration: none;
+    margin-left: 50px;
+    font-size: 1rem;
+}
+
+.navbar a:hover {
+    color: coral;
+    transition: 0.3s;
+}
+
+.register {
+    padding: 10px;
+    margin-left: 10px;
+    text-decoration: none;
+    border: 2px solid;
+    border-radius: 10px;
+}
+
+.register:hover {
+    background: aqua;
+    color: #171717;
+    transition: .3s ease;
+}
+
+.underline {
+    border-bottom: 2px solid;
+}
+
+.bg-wallpaper {
+    position: absolute;
+    z-index: -1;
+    height: 100%;
+    filter: blur(3px);
+}
+
+.big-title {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 10vw;
+    top: 100px;
+    width: 100%;
+    animation: fadein 2s ease;
+    z-index: 1;
+    color: white;
+}
+
+.black-shadow-hr h1 {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    font-size: 50px;
+    margin: 50px;
+}
+
+.black-shadow-hr p {
+    font-size: 2vw;
+
+    margin: 0 300px;
+}
+
+.btn {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    bottom: 400px;
+    width: 400px;
+    font-size: 30px;
+    text-decoration: none;
+    padding: 10px;
+    color: white;
+    z-index: 2;
+
+    border: 2px solid white;
+    border-radius: 5px;
+
+    transition: .3s ease;
+}
+
+.btn:hover {
+    background: coral;
+    color: white;
+    padding: 10px;
+
+    transform: translateY(-10px);
+}
+
+.content-container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    height: 1050px;
+    width: 100%;
+}
+
+.content-header-container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    font-size: 50px;
+    margin-bottom: 100px;
+    margin-left: 20px;
+    top: 50px;
+}
+
+.img-content {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    margin: 30px;
+    box-shadow: 2px 2px 5px 5px;
+
+    transition: 0.3s ease;
+    /* animation-name: moving;
+    animation-duration: 2s;
+    animation-timing-function: ease;
+    animation-iteration-count: infinite; */
+}
+
+.img-content-container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    margin-left: 20px;
+    margin-bottom: 20px;
+    bottom: 30px;
+}
+
+.img-content-container p {
+    position: absolute;
+    top: 20%;
+    left: 25%;
+    margin: 0 20px;
+    color: aqua;
+}
+
+.img-content:hover {
+    transform: scale(1.05);
+    z-index: 1;
+}
+
+.btn-resp {
+    display: none;
+}
+
+.list-vokemons-header {
+    position: sticky;
+    top: 13em;
+    padding: 10px 30px;
+    margin-left: 50px;
+    font-size: 25px;
+}
+
+.list-vokemons-header-container {
+    position: relative;
+    height: 80rem;
+    width: 30%;
+    height: 100%;
+    padding: 100px 0;
+}
+
+.title-container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    height: 900px;
+    width: 100%;
+    margin-top: 40px;
+}
+
+.small-title {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+    top: 15em;
+    width: 100%;
+    animation: fadein 2s ease;
+    color: white;
+
+    z-index: 1;
+}
+
+.vokemons-container {
+    position: relative;
+    height: 1000px;
+}
+
+.img-vokemon1 {
+    position: relative;
+
+    transition: 0.3s ease;
+    animation: floating 4s ease-in-out infinite;
+}
+
+.img-vokemon2 {
+    position: relative;
+
+    transition: 0.3s ease;
+    animation: floating 4s ease-in-out 1s infinite;
+}
+
+.img-vokemon3 {
+    position: relative;
+
+    transition: 0.3s ease;
+    animation: floating 4s ease-in-out 2s infinite;
+}
+
+.img-vokemon-container {
+    position: relative;
+    width: 900px;
+    bottom: 800px;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    left: 35rem;
+
+    /* border: 2px solid; */
+}
+
+.img-vokemon1:hover,
+.img-vokemon2:hover,
+.img-vokemon3:hover {
+    scale: 1.2;
+    z-index: 1;
+}
+
+/* TOURNAMENT */
+/* TOURNAMENT */
+/* TOURNAMENT */
+/* TOURNAMENT */
+/* TOURNAMENT */
+/* TOURNAMENT */
+/* TOURNAMENT */
+/* TOURNAMENT */
+/* TOURNAMENT */
+/* TOURNAMENT */
+
+.btn-resp-tourn {
+    display: none;
+}
+
+.img-content-tournament {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    margin: 30px;
+    box-shadow: 2px 2px 5px 5px;
+
+    /* border: 2px solid; */
+
+    transition: 0.3s ease;
+}
+
+.img-content-tournament:hover {
+    transform: scale(1.1);
+}
+
+.img-tournament {
+    position: relative;
+    height: 400px;
+    width: 505px;
+    margin: 20px;
+    color: aqua;
+
+    /* border: 2px solid; */
+}
+
+.img-tournament-container {
+    position: relative;
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    margin: 20px;
+    padding: 0 20px;
+    height: 850px;
+    width: 1150px;
+    left: 180px;
+
+    /* border: 2px solid; */
+}
+
+.tournament-container {
+    position: relative;
+    height: 1600px;
+
+    /* border: 2px solid; */
+}
+
+.tournament-header-container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 50px;
+}
+
+.tournament-header-container h1 {
+    font-size: 50px;
+    margin-bottom: 20px;
+}
+
+.tournament-header-container h2 {
+    font-size: 25px;
+    margin: 0 300px;
+    padding: 10px;
+
+    color: coral;
+    /* 
+    border-top: 2px solid aqua;
+    border: 2px solid aqua;
+    border-radius: 20px; */
+}
+
+/* ANIMATION KEYFRAMES */
+/* ANIMATION KEYFRAMES */
+/* ANIMATION KEYFRAMES */
+/* ANIMATION KEYFRAMES */
+/* ANIMATION KEYFRAMES */
+/* ANIMATION KEYFRAMES */
+/* ANIMATION KEYFRAMES */
+/* ANIMATION KEYFRAMES */
+/* ANIMATION KEYFRAMES */
+/* ANIMATION KEYFRAMES */
+
+@keyframes fadein {
+    from {
+        transform: translateY(80px);
+        opacity: 0%;
+    }
+
+    to {
+        transform: translateY(0px);
+        opacity: 100%;
+    }
+}
+
+@keyframes floating {
+
+    0%,
+    100% {
+        transform: translateY(0px);
+    }
+
+    50% {
+        transform: translateY(-50px);
+    }
+}
+
+@keyframes moving {
+
+    0%,
+    100% {
+        transform: translateY(50px);
+    }
+
+    25% {
+        transform: translateX(50px);
+    }
+
+    50% {
+        transform: translateY(-50px);
+    }
+
+    75% {
+        transform: translateX(-50px);
+    }
+}
+
+/* RESPONSIVE PAGE */
+/* RESPONSIVE PAGE */
+/* RESPONSIVE PAGE */
+/* RESPONSIVE PAGE */
+/* RESPONSIVE PAGE */
+/* RESPONSIVE PAGE */
+/* RESPONSIVE PAGE */
+/* RESPONSIVE PAGE */
+/* RESPONSIVE PAGE */
+/* RESPONSIVE PAGE */
+
+.icon-menu {
+    position: relative;
+    font-size: 2.5rem;
+    display: none;
+}
+
+.navbar-resp {
+    display: inline;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown img {
+    width: 46px;
+    /* Sesuaikan dengan ukuran gambar profil Anda */
+    height: 46px;
+    /* Sesuaikan dengan ukuran gambar profil Anda */
+    border-radius: 50%;
+    /* Untuk membuat gambar profil bulat */
+    margin-right: 8px;
+    /* Jarak antara gambar profil dan teks */
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    /* Menggeser dropdown ke kiri */
+    transform: translateX(-100%);
+    border-radius: 4px;
+}
+
+.dropdown-content.show {
+    display: block;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: #f1f1f1;
+}
+
+.dropdown-button {
+    cursor: pointer;
+}
+
+
+
+
+/* 1024 */
+@media (max-width: 1024px) {
+
+    .big-title {
+        font-size: 70px;
+    }
+
+    .btn {
+        font-size: 20px;
+
+        position: relative;
+        top: 300px;
+        padding: 10px;
+        height: 50px;
+        width: 300px;
+    }
+
+    .img-content-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        /* border: 2px solid; */
+    }
+
+    .img-content-tournament {
+        height: 150px;
+        width: 250px;
+    }
+
+    .img-tournament-container {
+        position: relative;
+        height: 750px;
+        width: 1150px;
+        left: 100px;
+        padding: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        /* border: 2px solid; */
+    }
+
+    .img-vokemon-container {
+        position: relative;
+        width: 100px;
+        bottom: 900px;
+        display: flex;
+        justify-content: space-around;
+        flex-direction: column;
+        left: 35rem;
+
+        /* border: 2px solid; */
+    }
+
+    .logo {
+        font-size: 20px;
+    }
+
+    .navbar a,
+    .register {
+        font-size: 12px;
+        margin-left: 2rem;
+    }
+
+    .tournament-container {
+        position: relative;
+        height: 1100px;
+        width: 100%;
+        display: grid;
+        justify-content: center;
+        align-items: center;
+
+        /* border: 2px solid; */
+    }
+
+    .tournament-header-container {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 50px;
+    }
+
+    .tournament-header-container h1 {
+        font-size: 40px;
+        margin-bottom: 20px;
+    }
+
+    .tournament-header-container h2,
+    .img-vokemon2,
+    .img-vokemon3,
+    .small-title,
+    video,
+    .img-content-container p {
+        display: none;
+    }
+
+
+}
+
+/* 768 */
+@media (max-width: 768px) {
+
+    .black-shadow-hr {
+        display: flex;
+        justify-content: start;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .black-shadow-hr p {
+        font-size: 20px;
+
+        width: 80%;
+        /* border: 2px solid; */
+    }
+
+    .icon-menu {
+        display: none;
+    }
+
+    .img-vokemon-container {
+        position: absolute;
+        width: 450px;
+        height: 450px;
+        top: 300px;
+        left: 180px;
+        display: flex;
+        /* flex-direction: column; */
+
+        /* border: 2px solid; */
+    }
+
+    .list-vokemons-header {
+        width: 400px;
+
+        /* border: 2px solid; */
+    }
+
+    .list-vokemons-header-container {
+        height: 200px;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        /* border: 2px solid; */
+    }
+
+    .navbar {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        padding: 0 5%;
+
+        background-color: turquoise;
+        border-bottom: 2px solid;
+    }
+
+    .navbar-resp {
+        display: inline-flex;
+    }
+
+    .navbar,
+    .navbar a,
+    .register {
+        display: block;
+        margin: 1.5 rem 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        color: var(--dark-blue);
+    }
+
+    .register {
+        position: relative;
+        margin-right: 10px;
+
+        color: aqua;
+        border-color: aqua;
+    }
+
+    .vokemons-container {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        /* align-items: center; */
+
+        /* border: 2px solid; */
+    }
+}
+
+/* 425 */
+@media (max-width: 425px) {
+
+    .btn-resp {
+        position: absolute;
+        display: flex;
+        justify-content: center;
+        top: 400px;
+        left: 50px;
+        width: 300px;
+        font-size: 30px;
+        text-decoration: none;
+        padding: 10px;
+        color: var(--dark-blue);
+        z-index: 2;
+
+        background-color: aqua;
+        color: var(--dark-blue);
+        border: 2px solid var(--dark-blue);
+        border-radius: 5px;
+
+        transition: .3s ease;
+    }
+
+    .btn-resp:hover {
+        background: coral;
+        color: white;
+        padding: 10px;
+        cursor: pointer;
+
+        transform: translateY(-10px);
+    }
+
+    .big-title {
+        font-size: 50px;
+    }
+
+    .black-shadow-hr h1 {
+        font-size: 40px;
+    }
+
+    .content-header-container {
+        font-size: 30px;
+    }
+
+    .logo {
+        font-size: 20px;
+    }
+
+    .img-vokemon-container {
+        display: none;
+    }
+
+    .img-tournament-container {
+        display: none;
+    }
+
+    .tournament-container {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        /* flex-direction: column; */
+
+        /* border: 2px solid; */
+    }
+
+    .tournament-header-container h1 {
+        display: none;
+    }
+
+    .btn-resp-tourn {
+        font-size: 20px;
+
+        position: absolute;
+        width: 200px;
+        padding: 10px;
+        display: flex;
+        justify-content: center;
+        text-decoration: none;
+        z-index: 2;
+
+        background-color: aqua;
+        color: var(--dark-blue);
+        border: 2px solid var(--dark-blue);
+        border-radius: 5px;
+
+        transition: .3s ease;
+    }
+
+    .btn-resp-tourn:hover {
+        cursor: pointer;
+
+        background-color: coral;
+
+        transform: translateY(-10px);
+    }
+
+    .footer-copyright {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .black-shadow-hr p {
+        display: none;
+    }
+}

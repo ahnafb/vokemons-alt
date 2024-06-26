@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Custom Modal Example</title>
+
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles/tournament.css') }}">
+  <script src="/static/script/tournament.js"></script>
+  <link rel="shortcut icon" href="{{ url_for('static', filename='snorlax.ico') }}" type="image/x-icon">
+</head>
+<body>
+
+<button onclick="openModal()">Click me</button>
+
+<div id="myModal" class="modal">
+  <p>Hello, this is a custom pop-up box!</p>
+  <button onclick="closeModal()">Close</button>
+</div>
+
+</body>
+</html>

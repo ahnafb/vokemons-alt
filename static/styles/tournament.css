@@ -1,0 +1,483 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@500&family=Press+Start+2P&display=swap');
+
+:root {
+    --dark-blue: #14191d;
+}    
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+
+    font-family: "Orbitron", sans-serif;
+    color: aqua;
+}
+
+body {
+    background: #14191d;
+}
+
+button {
+    font-family: sans-serif;
+
+    position: relative;
+    top: 10px;
+    cursor: pointer;
+
+    border: 2px solid;
+    border-radius: 5px;
+    background-color: aquamarine;
+    color: black;
+}
+
+footer {
+    background: #000000;
+}
+
+footer p {
+    color: grey;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+footer a {
+    color: grey;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+h2 {
+    color: var(--dark-blue);
+}
+
+span {
+    margin-top: 5px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    border-top: 2px solid var(--dark-blue);
+    border-bottom: 2px solid var(--dark-blue);
+    background-color: aqua;
+    color: var(--dark-blue);
+}
+
+.bg-wallpaper {
+    position: absolute;
+    z-index: -1;
+    height: 100%;
+    width: 100%;
+
+    background-attachment: scroll ;
+}
+
+.black-shadow-hr-abs{
+    position: absolute;
+    width: 100%;
+    height: 500px;
+    top: 400px;
+    box-shadow: 20px 20px 50px 100px var(--dark-blue);
+    background: var(--dark-blue);
+    z-index: -1;
+}
+
+/* NAVIGATION BAR */
+/* NAVIGATION BAR */
+/* NAVIGATION BAR */
+/* NAVIGATION BAR */
+/* NAVIGATION BAR */
+/* NAVIGATION BAR */
+/* NAVIGATION BAR */
+/* NAVIGATION BAR */
+/* NAVIGATION BAR */
+/* NAVIGATION BAR */
+
+.logo {
+    text-decoration: none;
+    font-size: 30px;
+    font-weight: 500;
+    margin-right: 10px;
+}
+
+.nav-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px;
+    background: rgba(255, 255, 255, .1);
+    backdrop-filter: blur(40px);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 3;
+
+    border: 2px solid;
+    border-radius: 10px;
+}
+
+.navbar a {
+    text-decoration: none;
+    margin-left: 50px;
+    font-size: 1rem;
+}
+
+.navbar a:hover {
+    color: coral;
+    transition: 0.3s;
+}
+
+.register {
+    padding: 10px;
+    margin-left: 10px;
+    text-decoration: none;
+    
+    border: 2px solid;
+    border-radius: 10px;
+}
+
+.register:hover {
+    background: aqua;
+    color: #171717;
+    transition: .3s ease;
+}
+
+.underline {
+    border-bottom: 2px solid;
+}
+
+/* TOURNAMENT CONTENT */
+/* TOURNAMENT CONTENT */
+/* TOURNAMENT CONTENT */
+/* TOURNAMENT CONTENT */
+/* TOURNAMENT CONTENT */
+/* TOURNAMENT CONTENT */
+/* TOURNAMENT CONTENT */
+/* TOURNAMENT CONTENT */
+/* TOURNAMENT CONTENT */
+/* TOURNAMENT CONTENT */
+
+.past {
+    color: coral;
+}
+
+.popUpBox {
+    position: fixed;
+    width: 400px;
+    height: 400px;
+    bottom: 150px;
+    display: none;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+    z-index: 1;
+
+    background-color: aquamarine;
+
+    /* border: 2px solid navajowhite; */
+    border-radius: 10px;
+    box-shadow: 2px 2px 20px 2px;
+
+    animation: float 1s ease;
+}
+
+.popUpBox button {
+    font-family: sans-serif;
+    
+    position: absolute;
+    left: 90%;
+    height: 20px;
+    width: 20px;
+    
+    background-color: antiquewhite;
+    color: var(--dark-blue);
+    border: 2px solid var(--dark-blue);
+    border-radius: 5px;
+}
+
+.popUpBox-footer {
+    position: relative;
+    height: 130px;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+    /* border: 2px solid var(--dark-blue); */
+    color: var(--dark-blue);
+}
+
+.popUpBox-footer-minibox {
+    position: relative;
+    width: 100%;
+    height: 130px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    gap: 5px;
+
+    color: var(--dark-blue);
+    /* border-left: 2px solid var(--dark-blue);
+    border-right: .5px solid var(--dark-blue); */
+    /* box-shadow: 2px 2px 10px 2px; */
+}
+
+.popUpBox-header {
+    position: relative;
+    top: 20px;
+    height: 200px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column-reverse;
+    gap: 20px;
+
+    /* border: 2px solid black; */
+    color: black;
+}
+
+.popUpBox-header-minibox {
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    color: var(--dark-blue);
+    background-color: aqua;
+    border-top: 2px solid var(--dark-blue);
+    border-bottom: 2px solid var(--dark-blue);
+    /* box-shadow: 2px 2px 10px 2px; */
+}
+
+.schedule-container {
+    position: absolute;
+    top: 200px;
+    width: 100%;
+    height: 1500px;
+    padding: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 50px;
+
+    /* border: 2px solid; */
+}
+
+.schedule-bar-container {
+    position: relative;
+    width: 80%;
+    height: 150px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    background-color: turquoise;
+    border-left: 10px solid coral;
+    border-right: 10px solid aqua;
+    box-shadow: 2px 2px 10px 2px;
+
+    transition: .2s ease;
+    animation: float 2s ease;
+}
+
+.schedule-bar-container:hover {
+    transform: translateY(-5px);
+}
+
+.team-img {
+    position: absolute;
+    width: 200px;
+
+    /* border: 2px solid; */
+}
+
+.tournament-container {
+    position: relative;
+    width: 100%;
+    height: 1600px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    /* border: 2px solid; */
+}
+
+.trainer-img {
+    position: relative;
+    margin: 0 20px;
+    padding: 10px 0;
+    height: 150px;
+    display: flex;
+    flex-direction: column;
+    
+
+    /* border: 2px solid coral; */
+}
+
+/* ANIMATION KEYFRAMES */
+/* ANIMATION KEYFRAMES */
+/* ANIMATION KEYFRAMES */
+/* ANIMATION KEYFRAMES */
+/* ANIMATION KEYFRAMES */
+/* ANIMATION KEYFRAMES */
+/* ANIMATION KEYFRAMES */
+/* ANIMATION KEYFRAMES */
+/* ANIMATION KEYFRAMES */
+/* ANIMATION KEYFRAMES */
+
+@keyframes float {
+    from {
+        transform: translateY(50px);
+        opacity: 0%;
+    }
+
+    to {
+        transform: translateY(0);
+        opacity: 100%;
+    }
+}
+
+/* RESPONSIVE PAGE */
+/* RESPONSIVE PAGE */
+/* RESPONSIVE PAGE */
+/* RESPONSIVE PAGE */
+/* RESPONSIVE PAGE */
+/* RESPONSIVE PAGE */
+/* RESPONSIVE PAGE */
+/* RESPONSIVE PAGE */
+/* RESPONSIVE PAGE */
+/* RESPONSIVE PAGE */
+
+.icon-menu {
+    position: relative;
+    font-size: 2.5rem;
+    display: none;
+}
+
+.navbar-resp {
+    display: inline;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown img {
+    width: 46px; /* Sesuaikan dengan ukuran gambar profil Anda */
+    height: 46px; /* Sesuaikan dengan ukuran gambar profil Anda */
+    border-radius: 50%; /* Untuk membuat gambar profil bulat */
+    margin-right: 8px; /* Jarak antara gambar profil dan teks */
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    /* Menggeser dropdown ke kiri */
+    transform: translateX(-100%);
+    border-radius: 4px;
+}
+
+.dropdown-content.show {
+    display: block;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: #f1f1f1;
+}
+
+.dropdown-button {
+    cursor: pointer;
+}
+
+@media (max-width: 1024px) {
+    .navbar a, .register {
+        font-size: 12px;
+        margin-left: 1rem;
+    }
+}
+
+@media (max-width: 768px) { 
+
+    .navbar {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        padding: 0 5%;
+
+        background-color: turquoise;
+        border-bottom: 2px solid;
+    }
+    
+    .navbar-resp {
+        display: inline-flex;
+    }
+    
+    .navbar, .navbar a, .register {
+        display: block;
+        margin: 1.5 rem 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+
+        color: var(--dark-blue);
+    }
+
+    .register {
+        position: relative;
+        margin-right: 10px;
+
+        color: aqua;
+    }
+
+}
+
+/* 425 */
+@media (max-width: 426px) {
+    .logo {
+        font-size: 20px;
+    }
+
+    .schedule-bar-container {
+        font-size: 10px;
+
+        position: relative;
+        width: 80%;
+        height: 150px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    
+        /* background-color: turquoise;
+        border-left: 10px solid coral;
+        border-right: 10px solid aqua;
+        box-shadow: 2px 2px 10px 2px; */
+    
+        transition: .2s ease;
+        animation: float 2s ease;
+    }
+    
+    .schedule-bar-container:hover {
+        transform: translateY(-5px);
+    }
+}

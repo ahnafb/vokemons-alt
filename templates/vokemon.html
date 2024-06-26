@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VokemonS | Vokemon Page</title>
+
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles/vokemon.css') }}">
+    <script src='{{ url_for("static", filename="script/main.js") }}'></script>
+    <link rel="shortcut icon" href="{{ url_for('static', filename='snorlax.ico') }}" type="image/x-icon">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+
+<!-- NAVIGATION BAR -->
+<!-- NAVIGATION BAR -->
+<!-- NAVIGATION BAR -->
+<!-- NAVIGATION BAR -->
+<!-- NAVIGATION BAR -->
+<!-- NAVIGATION BAR -->
+<!-- NAVIGATION BAR -->
+<!-- NAVIGATION BAR -->
+<!-- NAVIGATION BAR -->
+<!-- NAVIGATION BAR -->
+
+<body>
+    <header class="nav-container">
+        <a href="{{ url_for('home') }}" class="logo">VokemonS</a>
+    <nav class="navbar">
+        <a href="{{ url_for('home') }}">HOME</a>
+        <a href="{{ url_for('news') }}">NEWS</a>
+        <a href="{{ url_for('vokemon') }}" class="underline">VOKEMON</a>
+        <a href="{{ url_for('tournament') }}">TOURNAMENT</a>
+    </nav>
+    
+    {% if logged_in %}
+    <div class="dropdown">
+        <a href="#" class="profile">
+            <img src="{{ url_for('static', filename=logged_in.profile_pic_default) }}" alt="Profile Image">
+        </a>
+        <div class="dropdown-content" id="dropdownContent">
+            <a href="#">{{ logged_in.username }}</a>
+            <a href="{{ url_for('logout') }}">Log Out</a>  <!-- Tombol logout -->
+        </div>
+    </div>
+    {% else %}
+    <div class="navbar-resp">
+        <a href="{{ url_for('login') }}" class="register">REGISTER/LOGIN</a>
+        <label for="" class="icon-menu">
+            <i class='bx bx-menu' menu-dropdown></i>
+        </label>
+    </div>
+    {% endif %}
+
+</header>
+
+<!-- CONTENT PAGE -->
+<!-- CONTENT PAGE -->
+<!-- CONTENT PAGE -->
+<!-- CONTENT PAGE -->
+<!-- CONTENT PAGE -->
+<!-- CONTENT PAGE -->
+<!-- CONTENT PAGE -->
+<!-- CONTENT PAGE -->
+<!-- CONTENT PAGE -->
+<!-- CONTENT PAGE -->
+
+<div class="vokemon-container-title">
+    <h1>THE VOKEDEX</h1>
+</div>
+
+<div class="vokemon-container">
+    <!-- <img src="/wallpaper/pokemonwp1.jpg" 
+    class="bg-wallpaper"
+    width="100%"
+    alt="pokemonwp1"> -->
+
+    <!-- PIKACHU -->
+    <div class="vokemon-box">
+        <img src="/static/images/pikachu.png" 
+        class="vokemon-img"
+        width="350px"
+        alt="">
+        <div class="vokemon-name">PIKACHU</div>
+        <div class="vokemon-box-details">
+            Pikachu is known for its electrical abilities. It can generate and discharge electrical energy, and its signature move is "Thunderbolt." Pikachu is also capable of learning various Electric-type moves as it levels up.
+        </div>
+
+        <div class="vokemon-box-stats-container">
+            <div class="vokemon-minibox-stats">
+                <div class="vokemon-minibox-stats-header">
+                    TYPE
+                </div>
+                <img src="/static/images/electric.png" 
+                height="40px"
+                alt="">
+            </div>
+            
+            <div class="vokemon-minibox-stats">
+                <div class="vokemon-minibox-stats-header">
+                    SPECIES
+                </div>
+                Mouse
+            </div>
+        </div>
+    </div>
+
+    <!-- CHARIZARD -->
+    <div class="vokemon-box">
+        <img src="/static/images/charizard.png" 
+        class="vokemon-img"
+        width="350px"
+        alt="">
+
+        <div class="vokemon-name">CHARIZARD</div>
+        <div class="vokemon-box-details">
+            Charizard is known for its powerful Fire-type attacks. It can breathe fire and is capable of learning a variety of Fire-type moves such as "Flamethrower" and "Fire Blast." In addition to its Fire-type abilities, Charizard can also learn Flying-type moves, making it a versatile in battles.
+        </div>
+
+        <div class="vokemon-box-stats-container">
+            <div class="vokemon-minibox-stats">
+                <div class="vokemon-minibox-stats-header">
+                    TYPE
+                </div>
+                <img src="/static/images/fire.png"
+                height="40px"
+                alt="">
+                <img src="/static/images/flying.png" 
+                height="40px"
+                alt="">
+            </div>
+            
+            <div class="vokemon-minibox-stats">
+                <div class="vokemon-minibox-stats-header">
+                    SPECIES
+                </div>
+                Flame
+            </div>
+        </div>
+    </div>
+
+    <!-- GENGAR -->
+    <div class="vokemon-box">
+        <img src="/static/images/gengar.png" 
+        class="vokemon-img"
+        width="350px"
+        alt="">
+
+        <div class="vokemon-name">GENGAR</div>
+        <div class="vokemon-box-details">
+            Gengar is known for its Ghost-type abilities, which include the power to phase through walls and the ability to learn ghostly moves such as "Shadow Ball" and "Hypnosis." Gengar's Poison typing also allows it to learn Poison-type moves.
+        </div>
+
+        <div class="vokemon-box-stats-container">
+            <div class="vokemon-minibox-stats">
+                <div class="vokemon-minibox-stats-header">
+                    TYPE
+                </div>
+                <img src="/static/images/ghost.png" 
+                height="40px"
+                alt="">
+                <img src="/static/images/poison.png"
+                height="40px"
+                alt="">
+            </div>
+            
+            <div class="vokemon-minibox-stats">
+                <div class="vokemon-minibox-stats-header">
+                    SPECIES
+                </div>
+                Shadow
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="vokemon-container2">
+    
+    <!-- EEVEE -->
+    <div class="vokemon-box">
+        <img src="/static/images/eevee.png" 
+        class="vokemon-img"
+        width="350px"
+        alt="">
+
+        <div class="vokemon-name">EEVEE</div>
+        <div class="vokemon-box-details">
+            Eevee is known for its adaptability, and its potential to evolve into different types makes it a sought-after Pokémon. It has a variety of moves and can learn techniques from multiple elemental categories.
+        </div>
+
+        <div class="vokemon-box-stats-container">
+            <div class="vokemon-minibox-stats">
+                <div class="vokemon-minibox-stats-header">
+                    TYPE
+                </div>
+                <img src="/static/images/normal.png" 
+                height="40px"
+                alt="">
+            </div>
+            
+            <div class="vokemon-minibox-stats">
+                <div class="vokemon-minibox-stats-header">
+                    SPECIES
+                </div>
+                Evolution
+            </div>
+        </div>
+    </div>
+
+    <!-- SNORLAX -->
+    <div class="vokemon-box">
+        <img src="/static/images/snorlax.png" 
+        class="vokemon-img"
+        width="350px"
+        alt="">
+
+        <div class="vokemon-name">SNORLAX</div>
+        <div class="vokemon-box-details">
+            Snorlax is known for its high HP and physical strength. It is often associated with the move "Rest," which allows it to fully heal its HP but puts it to sleep for a few turns. Snorlax is also known for its signature move "Body Slam."
+        </div>
+
+        <div class="vokemon-box-stats-container">
+            <div class="vokemon-minibox-stats">
+                <div class="vokemon-minibox-stats-header">
+                    TYPE
+                </div>
+                <img src="/static/images/normal.png" 
+                height="40px"
+                alt="">
+            </div>
+            
+            <div class="vokemon-minibox-stats">
+                <div class="vokemon-minibox-stats-header">
+                    SPECIES
+                </div>
+                Sleeping
+            </div>
+        </div>
+    </div>
+
+    <!-- SCIZOR -->
+    <div class="vokemon-box">
+        <img src="/static/images/scizor.png" 
+        class="vokemon-img"
+        width="350px"
+        alt="">
+
+        <div class="vokemon-name">SCIZOR</div>
+        <div class="vokemon-box-details">
+            Scizor has a high Attack stat and is known for its speed and offensive capabilities. It is often seen using powerful moves such as "Bullet Punch" and "X-Scissor." Scizor's Bug types gives it resistances to various types, making it a versatile Pokémon in battles.
+        </div>
+
+        <div class="vokemon-box-stats-container">
+            <div class="vokemon-minibox-stats">
+                <div class="vokemon-minibox-stats-header">
+                    TYPE
+                </div>
+                <img src="/static/images/bug.png" 
+                height="40px"
+                alt="">
+                <img src="/static/images/steel.png"
+                height="40px"
+                alt="">
+            </div>
+            
+            <div class="vokemon-minibox-stats">
+                <div class="vokemon-minibox-stats-header">
+                    SPECIES
+                </div>
+                Pincer
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="vokemon-container3">
+
+    <!-- BULBASAUR -->
+    <div class="vokemon-box">
+        <img src="/static/images/bulbasaur.png" 
+        class="vokemon-img"
+        width="350px"
+        alt="">
+        <div class="vokemon-name">BULBASAUR</div>
+        <div class="vokemon-box-details">
+            Bulbasaur's most distinctive feature is the plant bulb on its back. The bulb is part of its body and eventually grows into a large flower as it evolves. This plant not only provides Bulbasaur with energy but also grants it access to Grass-type moves.
+        </div>
+
+        <div class="vokemon-box-stats-container">
+            <div class="vokemon-minibox-stats">
+                <div class="vokemon-minibox-stats-header">
+                    TYPE
+                </div>
+                <img src="/static/images/poison.png" 
+                height="40px"
+                alt="">
+
+                <img src="/static/images/grass.png" 
+                height="40px"
+                alt="">
+            </div>
+            
+            <div class="vokemon-minibox-stats">
+                <div class="vokemon-minibox-stats-header">
+                    SPECIES
+                </div>
+                Seed
+            </div>
+        </div>
+    </div>
+
+    <!-- CHARMANDER -->
+    <div class="vokemon-box">
+        <img src="/static/images/charmander.png" 
+        class="vokemon-img"
+        width="350px"
+        alt="">
+        <div class="vokemon-name">CHARMANDER</div>
+        <div class="vokemon-box-details">
+            Charmander is known for its fire-based abilities. The flame on its tail is an indicator of its health and mood, and it burns more brightly when Charmander is happy. Charmander and its evolutions are capable of learning powerful Fire-type moves such as "Ember," "Flamethrower," and "Fire Blast."
+        </div>
+
+        <div class="vokemon-box-stats-container">
+            <div class="vokemon-minibox-stats">
+                <div class="vokemon-minibox-stats-header">
+                    TYPE
+                </div>
+                <img src="/static/images/fire.png" 
+                height="40px"
+                alt="">
+            </div>
+            
+            <div class="vokemon-minibox-stats">
+                <div class="vokemon-minibox-stats-header">
+                    SPECIES
+                </div>
+                Lizard
+            </div>
+        </div>
+    </div>
+
+    <!-- GYARADOS -->
+    <div class="vokemon-box">
+        <img src="/static/images/gyarados.png" 
+        class="vokemon-img"
+        width="350px"
+        alt="">
+        <div class="vokemon-name">GYARADOS</div>
+        <div class="vokemon-box-details">
+            Gyarados is known for its strength and powerful Water and Flying-type moves. It is often associated with moves such as "Hydro Pump," "Dragon Pulse," and "Hyper Beam." Gyarados is also known for its Mega Evolution, known as Mega Gyarados, which enhances its stats and gives it the Dark typing.
+        </div>
+
+        <div class="vokemon-box-stats-container">
+            <div class="vokemon-minibox-stats">
+                <div class="vokemon-minibox-stats-header">
+                    TYPE
+                </div>
+                <img src="/static/images/flying.png" 
+                height="40px"
+                alt="">
+
+                <img src="/static/images/water.png" 
+                height="40px"
+                alt="">
+            </div>
+            
+            <div class="vokemon-minibox-stats">
+                <div class="vokemon-minibox-stats-header">
+                    SPECIES
+                </div>
+                Atrocious
+            </div>
+        </div>
+    </div>
+</div>
+    
+
+<!-- FOOTER -->
+<!-- FOOTER -->
+<!-- FOOTER -->
+<!-- FOOTER -->
+<!-- FOOTER -->
+<!-- FOOTER -->
+<!-- FOOTER -->
+<!-- FOOTER -->
+<!-- FOOTER -->
+<!-- FOOTER -->
+
+<footer>
+
+    <br>
+    
+            <p>&copy; 2023 VokemonS</p>
+            <br>
+            <ul>
+                <li><a href="#">About Us</a></li>
+                <li><a href="#">Contact Us</a></li>
+            </ul>
+    
+    <br>
+        <p class="footer-copyright">VokemonS and the VokemonS logo are trademarks and/or</span>
+        <p class="footer-copyright">registered trademarks of BINUS Corporation.</span>
+        <p class="footer-copyright">2023 BINUS Corporation, all rights reserved.</span>     
+    <br>
+            
+    
+        </footer>
+        
+</body>
+
+
+</html>

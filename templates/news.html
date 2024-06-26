@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VokemonS | News Page</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles/news.css') }}">
+    <script src='{{ url_for("static", filename="script/main.js") }}'></script>
+    <link rel="shortcut icon" href="{{ url_for('static', filename='snorlax.ico') }}" type="image/x-icon">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+
+<!-- NAVIGATION BAR -->
+<!-- NAVIGATION BAR -->
+<!-- NAVIGATION BAR -->
+<!-- NAVIGATION BAR -->
+<!-- NAVIGATION BAR -->
+<!-- NAVIGATION BAR -->
+<!-- NAVIGATION BAR -->
+<!-- NAVIGATION BAR -->
+<!-- NAVIGATION BAR -->
+<!-- NAVIGATION BAR -->
+
+<body>
+
+    <img class="bg-wallpaper" src="/static/wallpaper/pokemonwp4.jpg" alt="">
+
+    <header class="nav-container">
+        <a href="{{ url_for('home') }}" class="logo">VokemonS</a>
+    <nav class="navbar">
+        <a href="{{ url_for('home') }}">HOME</a>
+        <a href="{{ url_for('news') }}" class="underline">NEWS</a>
+        <a href="{{ url_for('vokemon') }}">VOKEMON</a>
+        <a href="{{ url_for('tournament') }}">TOURNAMENT</a>
+    </nav>
+    
+    {% if logged_in %}
+    <div class="dropdown">
+        <a href="#" class="profile">
+            <img src="{{ url_for('static', filename=logged_in.profile_pic_default) }}" alt="Profile Image">
+        </a>
+        <div class="dropdown-content" id="dropdownContent">
+            <a href="#">{{ logged_in.username }}</a>
+            <a href="{{ url_for('logout') }}">Log Out</a>  <!-- Tombol logout -->
+        </div>
+    </div>
+    {% else %}
+    <div class="navbar-resp">
+        <a href="{{ url_for('login') }}" class="register">REGISTER/LOGIN</a>
+        <label for="" class="icon-menu">
+            <i class='bx bx-menu' menu-dropdown></i>
+        </label>
+    </div>
+    {% endif %}
+
+</header>
+
+<!-- NEWS -->
+<!-- NEWS -->
+<!-- NEWS -->
+<!-- NEWS -->
+<!-- NEWS -->
+<!-- NEWS -->
+<!-- NEWS -->
+<!-- NEWS -->
+<!-- NEWS -->
+<!-- NEWS -->
+
+        <div class="news-container">
+            <div class="black-shadow-hr-abs"></div>
+            <div class="news-header-container">
+                <h1>NEWS</h1>
+                <h2>Take a look of what's going on in the VokemonS community</h2>
+            </div>
+            
+            <div class="news-content-container">
+                <img src="/static/images/tournScreenshot.png" 
+                height="200px"
+                alt="">
+                <div>
+                    <p>AUGUST 17, 2023</p>
+                    <h2>Vokemons Buffs and Nerfs</h2>
+                    <p>The fandom complain a lot about some of the Vokemons that has been destroying other vokemons because it is way too strong. So here are some vokemons that got buffs and nerfs</p>
+                </div>
+            </div>
+                
+            <div class="news-content-container">
+                <img src="/static/images/tournScreenshot (3).png" 
+                height="200px"
+                alt="">
+                <div>
+                    <p>JUNE 1, 2023</p>
+                    <h2>Greatest Tournament Ever!</h2>
+                    <p>Held on a grand stage, the event showcased unparalleled skill, fierce determination, and moments of breathtaking brilliance. Players from diverse backgrounds and disciplines converged, each vying for glory in a mesmerizing display of human achievement</p>
+                </div>
+            </div>
+
+            <div class="news-content-container">
+                <img src="/static/images/tournScreenshot (2).png" 
+                height="200px"
+                alt="">
+                <div>
+                    <p>APRIL 5, 2023</p>
+                    <h2>Las Vegas Mini Tournament</h2>
+                    <p>In the vibrant heart of Las Vegas, a miniature Pokemon tournament unfolded, casting a spell of excitement and nostalgia on enthusiasts from near and far. Amidst the dazzling lights of the city that never sleeps, passionate trainers gathered to showcase their strategic prowess and the bonds forged with their pocket-sized companions.</p>
+                </div>
+            </div>
+
+            <div class="news-content-container">
+                <img src="/static/images/Screenshot (20).png" 
+                height="200px"
+                alt="">
+                <div>
+                    <p>JANUARY 13, 2023</p>
+                    <h2>Rosters Changes</h2>
+                    <p>In the dynamic realm of esports, roster changes are a constant force, reshaping the competitive landscape with strategic shifts that keep fans and analysts on the edge of their seats. Teams, driven by the pursuit of excellence, meticulously evaluate and adjust their rosters to find the winning formula/</p>
+                </div>
+            </div>
+        </div>
+
+
+
+<!-- FOOTER -->
+<!-- FOOTER -->
+<!-- FOOTER -->
+<!-- FOOTER -->
+<!-- FOOTER -->
+<!-- FOOTER -->
+<!-- FOOTER -->
+<!-- FOOTER -->
+<!-- FOOTER -->
+<!-- FOOTER -->
+
+<footer>
+
+    <br>
+    
+            <p>&copy; 2023 VokemonS</p>
+            <br>
+            <ul>
+                <li><a href="#">About Us</a></li>
+                <li><a href="#">Contact Us</a></li>
+            </ul>
+    
+    <br>
+    
+            <p class="footer-copyright">VokemonS and the VokemonS logo are trademarks and/or</span>
+            <p class="footer-copyright">registered trademarks of BINUS Corporation.</span>
+            <p class="footer-copyright">2023 BINUS Corporation, all rights reserved.</span>
+            
+    <br>
+            
+    
+        </footer>
+    
+</body>
+
+
+</html>

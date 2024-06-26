@@ -1,0 +1,420 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@500&family=Press+Start+2P&display=swap');
+
+:root {
+    --dark-blue: #14191d;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+
+    font-family: "Orbitron", sans-serif;
+    color: aqua;
+}
+
+body {
+    background: var(--dark-blue);
+    background-image: url(/wallpaper/pokemonwp1.jpg);
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+footer {
+    background: #000000;
+}
+
+footer p {
+    color: grey;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+footer a {
+    color: grey;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo {
+    text-decoration: none;
+    font-size: 30px;
+    font-weight: 500;
+    margin-right: 10px;
+}
+
+/* NAVIGATION BAR */
+/* NAVIGATION BAR */
+/* NAVIGATION BAR */
+/* NAVIGATION BAR */
+/* NAVIGATION BAR */
+/* NAVIGATION BAR */
+/* NAVIGATION BAR */
+/* NAVIGATION BAR */
+/* NAVIGATION BAR */
+/* NAVIGATION BAR */
+
+.nav-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px;
+    background: rgba(255, 255, 255, .1);
+    backdrop-filter: blur(40px);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 3;
+
+    border: 2px solid;
+    border-radius: 10px;
+}
+
+.navbar a {
+    text-decoration: none;
+    margin-left: 50px;
+    font-size: 1rem;
+}
+
+.navbar a:hover {
+    color: coral;
+    transition: 0.3s;
+}
+
+.register {
+    padding: 10px;
+    margin-left: 10px;
+    text-decoration: none;
+    border: 2px solid;
+    border-radius: 10px;
+}
+
+.register:hover {
+    background: aqua;
+    color: #171717;
+    transition: .3s ease;
+}
+
+.underline {
+    border-bottom: 2px solid;
+}
+
+/* CONTENT PAGE */
+/* CONTENT PAGE */
+/* CONTENT PAGE */
+/* CONTENT PAGE */
+/* CONTENT PAGE */
+/* CONTENT PAGE */
+/* CONTENT PAGE */
+/* CONTENT PAGE */
+/* CONTENT PAGE */
+/* CONTENT PAGE */
+
+.bg-wallpaper {
+    position: absolute;
+    z-index: -1;
+    width: 100%;
+    background-attachment: fixed;
+
+    /* filter: blur(2px); */
+}
+
+.vokemon-box {
+    position: relative;
+    height: 500px;
+    width: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 2px 2px 20px 2px black;
+    cursor: pointer;
+
+    background-color: cyan;
+
+    border: 2px solid;
+    border-radius: 10px;
+
+    transition: .2s ease;
+    animation: box-load 2s ease;
+}
+
+.vokemon-box:hover {
+    transform: scale(1.1);
+}
+
+.vokemon-box-details {
+    font-family: 'Times New Roman', Times, serif;
+    position: relative;
+    top: 130px;
+    height: 160px;
+    width: 300px;
+    padding: 15px;
+    z-index: 1;
+
+    color: black;
+    background-color: aquamarine;
+    box-shadow: 2px 2px 20px 2px black;
+
+    transition: .2s ease;
+}
+
+.vokemon-box-details:hover {
+    transform: scale(1.1);
+    z-index: 10;
+}
+
+.vokemon-box-stats-container {
+    position: absolute;
+    top: 430px;
+    width: 300px;
+    height: 110px;
+    display: flex;
+    justify-content:space-around;
+    align-items: center;
+    z-index: 2;
+
+    background-color: coral;
+    box-shadow: 2px 2px 20px 2px black;
+
+    transition: .2s ease;
+}
+
+.vokemon-box-stats-container:hover {
+    transform: scale(1.1);
+}
+
+.vokemon-minibox-stats {
+    position: relative;
+    width: 100px;
+    height: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: end;
+    gap: 5px;
+
+    color: black;
+    background-color: coral;
+    /* border: 2px solid black; */
+}
+
+.vokemon-minibox-stats-header{
+    position: absolute;
+    display: flex;
+    bottom: 60px;
+
+    /* border: 2px solid black; */
+    color: black;
+}
+
+.vokemon-container {
+    position: relative;
+    height: 1000px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+
+} 
+
+.vokemon-container-title {
+    position: absolute;
+    top: 100px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.vokemon-container2 {
+    position: relative;
+    height: 1000px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+} 
+
+.vokemon-container3 {
+    position: relative;
+    height: 1000px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.vokemon-img {
+    position: absolute;
+    bottom: 250px;
+    z-index: 2;
+}
+
+.vokemon-name {
+    position: absolute;
+    bottom: 145px;
+    width: 100%;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+
+    font-size: 30px;
+    background-color: skyblue;
+    color: black;
+    box-shadow: 2px 2px 20px 2px black;
+}
+
+/* ANIMATION KEYFRAMES */
+/* ANIMATION KEYFRAMES */
+/* ANIMATION KEYFRAMES */
+/* ANIMATION KEYFRAMES */
+/* ANIMATION KEYFRAMES */
+/* ANIMATION KEYFRAMES */
+/* ANIMATION KEYFRAMES */
+/* ANIMATION KEYFRAMES */
+/* ANIMATION KEYFRAMES */
+/* ANIMATION KEYFRAMES */
+
+@keyframes box-load{
+    from {
+        transform: translateY(50px);
+        opacity: 0%;
+    }
+    
+    to {
+        transform: translateY(0);
+        opacity: 100%;
+    }
+}
+
+/* RESPONSIVE PAGE */
+/* RESPONSIVE PAGE */
+/* RESPONSIVE PAGE */
+/* RESPONSIVE PAGE */
+/* RESPONSIVE PAGE */
+/* RESPONSIVE PAGE */
+/* RESPONSIVE PAGE */
+/* RESPONSIVE PAGE */
+/* RESPONSIVE PAGE */
+/* RESPONSIVE PAGE */
+
+.icon-menu {
+    position: relative;
+    font-size: 2.5rem;
+    display: none;
+}
+
+.navbar-resp {
+    display: inline;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown img {
+    width: 46px; /* Sesuaikan dengan ukuran gambar profil Anda */
+    height: 46px; /* Sesuaikan dengan ukuran gambar profil Anda */
+    border-radius: 50%; /* Untuk membuat gambar profil bulat */
+    margin-right: 8px; /* Jarak antara gambar profil dan teks */
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    /* Menggeser dropdown ke kiri */
+    transform: translateX(-100%);
+    border-radius: 4px;
+}
+
+.dropdown-content.show {
+    display: block;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: #f1f1f1;
+}
+
+.dropdown-button {
+    cursor: pointer;
+}
+
+@media (max-width: 1024px) {
+    .navbar a, .register {
+        font-size: 12px;
+        margin-left: 1rem;
+    }
+}
+
+@media (max-width: 768px) {
+
+    .navbar {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        padding: 0 5%;
+
+        border-bottom: 2px solid;
+    }
+    
+    .navbar-resp {
+        display: inline-flex;
+    }
+
+    .navbar, .navbar a, .register {
+        display: block;
+        margin: 1.5 rem 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+
+        color: var(--dark-blue);
+        background-color: turquoise;
+    }
+
+    .register {
+        position: relative;
+        margin-right: 10px;
+    }
+
+    .vokemon-box {
+        height: 200px;
+        width: 200px;
+    }
+
+    .vokemon-img {
+        width: 150px;
+        top: 10px;
+    }
+
+    .vokemon-name {
+        font-size: 20px;
+    }
+
+    .vokemon-box-details, .vokemon-box-stats-container{
+        display: none;
+    }
+
+}
+
+@media (max-width: 425px) {
+    .logo {
+        font-size: 20px;
+    }
+}

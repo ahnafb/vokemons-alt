@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vokemon | Register</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles/register.css') }}">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-KyZXEAg4uG13d4v8hO2ZIv0HyK5TuY+1r7tnqjw4S0E=" crossorigin="anonymous"></script>
+    <script src="{{ url_for('static', filename='script/register.js') }}" defer></script>
+    <link rel="shortcut icon" href="{{ url_for('static', filename='snorlax.ico') }}" type="image/x-icon">
+</head>
+
+<body>
+    <div class="container">
+        <div class="left-panel">
+            <img src="/static/images/logodepan.png" alt="Gambar">
+        </div>
+        <div class="right-panel">
+            <h2>Register</h2>
+            <div>
+                <form id="signupForm" action="/sign_up/save" method="POST">
+                    <div class="input-group">
+                        <label for="username">Username:</label>
+                        <input type="text" id="username" name="username_give" required>
+                    </div>
+                    <div class="input-group">
+                        <label for="password">Password:</label>
+                        <input type="password" id="password" name="password_give" required>
+                    </div>
+                    <button type="submit">Sign Up</button>
+                </form>
+            </div>
+            <div class="dont">
+                <p>Go back to login page <a href="/login">Login</a></p>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

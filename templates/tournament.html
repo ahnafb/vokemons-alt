@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VokemonS | Tournament Page</title>
+
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles/tournament.css') }}">
+    <script src='{{ url_for("static", filename="script/main.js") }}'></script>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <script src="/static/script/tournament.js"></script>
+    <link rel="shortcut icon" href="{{ url_for('static', filename='snorlax.ico') }}" type="image/x-icon">
+</head>
+
+<body>
+    <header class="nav-container">
+        <a href="{{ url_for('home') }}" class="logo">VokemonS</a>
+        <nav class="navbar">
+            <a href="{{ url_for('home') }}">HOME</a>
+            <a href="{{ url_for('news') }}">NEWS</a>
+            <a href="{{ url_for('vokemon') }}">VOKEMON</a>
+            <a href="{{ url_for('tournament') }}" class="underline">TOURNAMENT</a>
+        </nav>
+
+        {% if logged_in %}
+        <div class="dropdown">
+            <a href="#" class="profile">
+                <img src="{{ url_for('static', filename=logged_in.profile_pic_default) }}" alt="Profile Image">
+            </a>
+            <div class="dropdown-content" id="dropdownContent">
+                <a href="#">{{ logged_in.username }}</a>
+                <a href="{{ url_for('logout') }}">Log Out</a> <!-- Tombol logout -->
+            </div>
+        </div>
+        {% else %}
+        <div class="navbar-resp">
+            <a href="{{ url_for('login') }}" class="register">REGISTER/LOGIN</a>
+            <label for="" class="icon-menu">
+                <i class='bx bx-menu' menu-dropdown></i>
+            </label>
+        </div>
+        {% endif %}
+
+    </header>
+
+    <img src="/static/wallpaper/pokemonwp11.jpg" class="bg-wallpaper" alt="">
+
+    <div class="tournament-container">
+        <div class="black-shadow-hr-abs"></div>
+
+        <div class="schedule-container">
+
+            <!-- ASH -->
+            <div class="popUpBox" id="popBoxAsh">
+                <div class="popUpBox-header">
+                    <img src="/static/images/ash.png" width="150px" alt="">
+
+                    <div class="popUpBox-header-minibox">
+                        ASH KETCHUM
+                    </div>
+                </div>
+
+                <div class="popUpBox-footer">
+                    <div class="popUpBox-footer-minibox">
+                        <span>DIVISION</span>
+                        <img src="/static/images/mystic.png" width="60px" alt="">
+                        TEAM MYSTIC
+                    </div>
+
+                    <div class="popUpBox-footer-minibox">
+                        <span>CONTINENT</span>
+                        <img src="/static/images/palletTown.png" width="60px" alt="">
+                        PALLET TOWN
+                    </div>
+                </div>
+
+                <button onclick="closeBoxAsh()">X</button>
+            </div>
+
+            <!-- ROY -->
+            <div class="popUpBox" id="popBoxRoy">
+                <div class="popUpBox-header">
+                    <img src="/static/images/roy.png" width="150px" alt="">
+
+                    <div class="popUpBox-header-minibox">
+                        ROY
+                    </div>
+                </div>
+
+                <div class="popUpBox-footer">
+                    <div class="popUpBox-footer-minibox">
+                        <span>DIVISION</span>
+                        <img src="/static/images/valor.png" width="60px" alt="">
+                        TEAM VALOR
+                    </div>
+
+                    <div class="popUpBox-footer-minibox">
+                        <span>CONTINENT</span>
+                        <img src="/static/images/royHometown.png" width="60px" alt="">
+                        ROY'S HOMETOWN
+                    </div>
+                </div>
+
+                <button onclick="closeBoxRoy()">X</button>
+            </div>
+
+            <!-- SERENA -->
+            <div class="popUpBox" id="popBoxSerena">
+                <div class="popUpBox-header">
+                    <img src="/static/images/serena.png" width="150px" alt="">
+
+                    <div class="popUpBox-header-minibox">
+                        SERENA
+                    </div>
+                </div>
+
+                <div class="popUpBox-footer">
+                    <div class="popUpBox-footer-minibox">
+                        <span>DIVISION</span>
+                        <img src="/static/images/valor.png" width="60px" alt="">
+                        TEAM VALOR
+                    </div>
+
+                    <div class="popUpBox-footer-minibox">
+                        <span>CONTINENT</span>
+                        <img src="/static/images/vanivilleTown.png" width="60px" alt="">
+                        VANIVILLE TOWN
+                    </div>
+                </div>
+
+                <button onclick="closeBoxSerena()">X</button>
+            </div>
+
+            <!-- CYNTHIA -->
+            <div class="popUpBox" id="popBoxCynthia">
+                <div class="popUpBox-header">
+                    <img src="/static/images/cynthia.png" width="150px" alt="">
+
+                    <div class="popUpBox-header-minibox">
+                        CYNTHIA
+                    </div>
+                </div>
+
+                <div class="popUpBox-footer">
+                    <div class="popUpBox-footer-minibox">
+                        <span>DIVISION</span>
+                        <img src="/static/images/instinct.png" width="60px" alt="">
+                        TEAM INSTINCT
+                    </div>
+
+                    <div class="popUpBox-footer-minibox">
+                        <span>CONTINENT</span>
+                        <img src="/static/images/celesticTown.png" width="60px" alt="">
+                        CELESTIC TOWN
+                    </div>
+                </div>
+
+                <button onclick="closeBoxCynthia()">X</button>
+            </div>
+
+
+
+
+
+
+
+
+
+            <h1>TOURNAMENT SCHEDULE</h1>
+            <p>11:20 AM | 5 March, 2024</p>
+
+            <!-- ASH VS ROY -->
+            <div class="schedule-bar-container">
+
+                <!-- ASH -->
+                <div class="trainer-img">
+                    <img src="/static/images/ash.png" width="100px" alt="">
+                    <button onclick="openBoxAsh()">Details</button>
+                </div>
+
+                <h2>5</h2>
+
+                <div class="trainer-img">
+                    <img src="/static/images/versus.png" width="60px" alt="">
+                </div>
+
+                <h2>3</h2>
+
+                <!-- ROY -->
+                <div class="trainer-img">
+                    <img src="/static/images/roy.png" width="100px" alt="">
+                    <button onclick="openBoxRoy()">Details</button>
+                </div>
+            </div>
+
+
+
+
+
+
+
+            <p class="past">15:00 PM | 6 December, 2023</p>
+            <!-- SERENA VS CYNTHIA -->
+            <div class="schedule-bar-container">
+
+                <!-- SERENA -->
+                <div class="trainer-img" id="popBoxSerena">
+                    <img src="/static/images/serena.png" width="100px" alt="">
+                    <button onclick="openBoxSerena()">Details</button>
+                </div>
+
+                <h2>3</h2>
+
+                <div class="trainer-img">
+                    <img src="/static/images/versus.png" width="60px" alt="">
+                </div>
+
+                <h2>4</h2>
+
+                <!-- CYNTHIA -->
+                <div class="trainer-img">
+                    <img src="/static/images/cynthia.png" width="100px" alt="">
+                    <button onclick="openBoxCynthia()">Details</button>
+                </div>
+            </div>
+
+
+
+
+
+
+
+
+            <p class="past">09:20 AM | 9 February, 2023</p>
+            <!-- ROY VS CYNTHIA -->
+            <div class="schedule-bar-container">
+
+                <!-- ROY -->
+                <div class="trainer-img" id="popBoxRoy">
+                    <img src="/static/images/roy.png" width="100px" alt="">
+                    <button onclick="openBoxRoy()">Details</button>
+                </div>
+
+                <h2>2</h2>
+
+                <div class="trainer-img">
+                    <img src="/static/images/versus.png" width="60px" alt="">
+                </div>
+
+                <h2>1</h2>
+
+                <!-- CYNTHIA -->
+                <div class="trainer-img" id="popBoxCynthia">
+                    <img src="/static/images/cynthia.png" width="100px" alt="">
+                    <button onclick="openBoxCynthia()">Details</button>
+                </div>
+            </div>
+
+
+
+
+
+
+
+
+
+            <p class="past">17:00 PM | 12 November, 2022</p>
+            <!-- ASH VS SERENA -->
+            <div class="schedule-bar-container">
+
+                <!-- ASH -->
+                <div class="trainer-img" id="popBoxAsh">
+                    <img src="/static/images/ash.png" width="100px" alt="">
+                    <button onclick="openBoxAsh()">Details</button>
+                </div>
+
+                <h2>7</h2>
+
+                <div class="trainer-img">
+                    <img src="/static/images/versus.png" width="60px" alt="">
+                </div>
+
+                <h2>4</h2>
+
+                <!-- SERENA -->
+                <div class="trainer-img" id="popBoxSerena">
+                    <img src="/static/images/serena.png" width="100px" alt="">
+                    <button onclick="openBoxSerena()">Details</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <!-- FOOTER -->
+    <!-- FOOTER -->
+    <!-- FOOTER -->
+    <!-- FOOTER -->
+    <!-- FOOTER -->
+    <!-- FOOTER -->
+    <!-- FOOTER -->
+    <!-- FOOTER -->
+    <!-- FOOTER -->
+    <!-- FOOTER -->
+
+    <footer>
+
+        <br>
+
+        <p>&copy; 2023 VokemonS</p>
+        <br>
+        <ul>
+            <li><a href="#">About Us</a></li>
+            <li><a href="#">Contact Us</a></li>
+        </ul>
+
+        <br>
+        <p class="footer-copyright">VokemonS and the VokemonS logo are trademarks and/or</span>
+        <p class="footer-copyright">registered trademarks of BINUS Corporation.</span>
+        <p class="footer-copyright">2023 BINUS Corporation, all rights reserved.</span>
+            <br>
+
+
+    </footer>
+
+</body>
+
+</html>

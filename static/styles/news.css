@@ -1,0 +1,371 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@500&family=Press+Start+2P&display=swap');
+
+:root {
+    --dark-blue: #14191d;
+}    
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+
+    font-family: "Orbitron", sans-serif;
+    color: aqua;
+}
+
+body {
+    background: #14191d;
+}
+
+footer {
+    background: #000000;
+}
+
+footer p {
+    color: grey;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+footer a {
+    color: grey;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.black-shadow-hr-abs{
+    position: absolute;
+    width: 100%;
+    height: 500px;
+    top: 400px;
+    box-shadow: 20px 20px 50px 100px var(--dark-blue);
+    background: var(--dark-blue);
+    z-index: -1;
+}
+
+/* NAVIGATION BAR */
+/* NAVIGATION BAR */
+/* NAVIGATION BAR */
+/* NAVIGATION BAR */
+/* NAVIGATION BAR */
+/* NAVIGATION BAR */
+/* NAVIGATION BAR */
+/* NAVIGATION BAR */
+/* NAVIGATION BAR */
+/* NAVIGATION BAR */
+
+.logo {
+    text-decoration: none;
+    font-size: 30px;
+    font-weight: 500;
+    margin-right: 10px;
+}
+
+.nav-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px;
+    background: rgba(255, 255, 255, .1);
+    backdrop-filter: blur(40px);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 3;
+
+    border: 2px solid;
+    border-radius: 10px;
+}
+
+.navbar a {
+    text-decoration: none;
+    margin-left: 50px;
+    font-size: 1rem;
+}
+
+.navbar a:hover {
+    color: coral;
+    transition: 0.3s;
+}
+
+.register {
+    padding: 10px;
+    margin-left: 10px;
+    text-decoration: none;
+    
+    border: 2px solid;
+    border-radius: 10px;
+}
+
+.register:hover {
+    background: aqua;
+    color: #171717;
+    transition: .3s ease;
+}
+
+.underline {
+    border-bottom: 2px solid;
+}
+
+/* HOMEPAGE CONTENT */
+/* HOMEPAGE CONTENT */
+/* HOMEPAGE CONTENT */
+/* HOMEPAGE CONTENT */
+/* HOMEPAGE CONTENT */
+/* HOMEPAGE CONTENT */
+/* HOMEPAGE CONTENT */
+/* HOMEPAGE CONTENT */
+/* HOMEPAGE CONTENT */
+/* HOMEPAGE CONTENT */
+
+.bg-wallpaper {
+    position: absolute;
+    z-index: -1;
+    height: 100%;
+    width: 100%;
+}
+
+/* NEWS PAGE CONTENT */
+/* NEWS PAGE CONTENT */
+/* NEWS PAGE CONTENT */
+/* NEWS PAGE CONTENT */
+/* NEWS PAGE CONTENT */
+/* NEWS PAGE CONTENT */
+/* NEWS PAGE CONTENT */
+/* NEWS PAGE CONTENT */
+/* NEWS PAGE CONTENT */
+/* NEWS PAGE CONTENT */
+
+.news-container {
+    position: relative;
+    height: 1500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    /* border: 2px solid; */
+}
+
+.news-header-container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 100px;
+
+    /* border: 2px solid; */
+}
+
+.news-header-container h1 {
+    /* margin-bottom: 50px; */
+    font-size: 50px;
+
+    color: coral;
+    /* border: 2px solid; */
+}
+
+.news-content-container {
+    position: relative;
+    top: 50px;
+    height: 220px;
+    width: 65em;
+    margin: 10px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    border-left: 2px solid;
+    border-right: 2px solid;
+
+    cursor: pointer;
+    animation: slide-left 2s ease;
+    transition: .2s;
+}
+
+.news-content-container:hover {
+    transform: scale(1.05);
+}
+
+.news-content-container p, h2 {
+    position: relative;
+    display: block;
+    margin: 15px 20px;  
+}
+
+.news-content-container h2 {
+    color: coral;
+}
+
+.p-resp {
+    display: none;
+}
+
+/* ANIMATION KEYFRAMES */
+/* ANIMATION KEYFRAMES */
+/* ANIMATION KEYFRAMES */
+/* ANIMATION KEYFRAMES */
+/* ANIMATION KEYFRAMES */
+/* ANIMATION KEYFRAMES */
+/* ANIMATION KEYFRAMES */
+/* ANIMATION KEYFRAMES */
+/* ANIMATION KEYFRAMES */
+/* ANIMATION KEYFRAMES */
+
+@keyframes slide-left {
+    from {
+        transform: translateX(-50px);
+        opacity: 0%;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 100%;
+    }
+}
+
+/* RESPONSIVE PAGE */
+/* RESPONSIVE PAGE */
+/* RESPONSIVE PAGE */
+/* RESPONSIVE PAGE */
+/* RESPONSIVE PAGE */
+/* RESPONSIVE PAGE */
+/* RESPONSIVE PAGE */
+/* RESPONSIVE PAGE */
+/* RESPONSIVE PAGE */
+/* RESPONSIVE PAGE */
+
+.icon-menu {
+    position: relative;
+    font-size: 2.5rem;
+    display: none;
+}
+
+.navbar-resp {
+    display: inline;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown img {
+    width: 46px; /* Sesuaikan dengan ukuran gambar profil Anda */
+    height: 46px; /* Sesuaikan dengan ukuran gambar profil Anda */
+    border-radius: 50%; /* Untuk membuat gambar profil bulat */
+    margin-right: 8px; /* Jarak antara gambar profil dan teks */
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    /* Menggeser dropdown ke kiri */
+    transform: translateX(-100%);
+    border-radius: 4px;
+}
+
+.dropdown-content.show {
+    display: block;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: #f1f1f1;
+}
+
+.dropdown-button {
+    cursor: pointer;
+}
+
+/* 1024 */
+@media (max-width: 1024px) {
+    .navbar a, .register {
+        font-size: 12px;
+        margin-left: 1rem;
+    }
+}
+
+/* 768 */
+@media (max-width: 768px) { 
+
+    .news-content-container img {
+        display: none;
+    }
+
+    .news-content-container p, h2 {
+        position: relative;
+        width: 50%;
+        left: 200px;
+        display: block;
+        margin: 15px 20px; 
+        font-size: 10px; 
+    }
+
+    .news-header-container h2 {
+        display: none;
+    }
+    
+    .navbar {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        padding: 0 5%;
+        
+        background-color: turquoise;
+        border-bottom: 2px solid;
+    }
+    
+    .navbar-resp {
+        display: inline-flex;
+    }
+    
+    .navbar, .navbar a {
+        display: block;
+        margin: 1.5 rem 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+
+        color: var(--dark-blue);
+    }
+
+    .register {
+        position: relative;
+        margin-right: 10px;
+        display: flex;
+        align-items: center;
+    }
+
+}
+
+/* 425 */
+@media (max-width: 425px) {
+    .logo {
+        font-size: 20px;
+    }
+    
+    .news-content-container p, h2 {
+        font-size: 10px;
+
+        width: 300px;
+        left: 1px;
+        display: flex;
+        flex-wrap: wrap;
+    }
+}
